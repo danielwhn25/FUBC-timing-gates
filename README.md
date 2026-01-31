@@ -2,7 +2,7 @@
 - Design cycle of laser receiver moduels for UBC Formula Racing (IC)
 - Prototyping, schematic capture, component selection, layout documentation and files
 
-#Prototyping
+# Prototyping
 <img width="1765" height="743" alt="image" src="https://github.com/user-attachments/assets/7159bb5a-fd12-4fc4-b73b-40e9af208080" />
 
 
