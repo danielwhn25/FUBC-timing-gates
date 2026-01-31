@@ -2,9 +2,9 @@
 - I have documented the full design cycle and my current progress
 - This includes
   - Concept generation (block diagrams, high-level overview)
--   Component selection
--   Schematic capture
--   Layout: placing and trace routings (three distinct versions)
+  - Component selection
+  - Schematic capture
+  - Layout: component placement and routing (V1.0, V2.0, V2.1)
 
 # Prototyping
 <img width="1765" height="743" alt="image" src="https://github.com/user-attachments/assets/7159bb5a-fd12-4fc4-b73b-40e9af208080" />
