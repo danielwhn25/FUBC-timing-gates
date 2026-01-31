@@ -1,6 +1,10 @@
-# UBC Formula Racing Timing Gates
-- Design cycle of laser receiver moduels for UBC Formula Racing (IC)
-- Prototyping, schematic capture, component selection, layout documentation and files
+# UBC Formula Racing Design Team - Timing Gates
+- I have documented the full design cycle and my current progress
+- This includes
+-   Concept generation (block diagrams, high-level overview)
+-   Component selection
+-   Schematic capture
+-   Layout: placing and trace routings (three distinct versions)
 
 # Prototyping
 <img width="1765" height="743" alt="image" src="https://github.com/user-attachments/assets/7159bb5a-fd12-4fc4-b73b-40e9af208080" />
