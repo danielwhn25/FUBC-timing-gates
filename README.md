@@ -1,7 +1,7 @@
 # UBC Formula Racing Design Team - Timing Gates
 - I have documented the full design cycle and my current progress
 - This includes
--   Concept generation (block diagrams, high-level overview)
+  - Concept generation (block diagrams, high-level overview)
 -   Component selection
 -   Schematic capture
 -   Layout: placing and trace routings (three distinct versions)
