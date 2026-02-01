@@ -1,4 +1,4 @@
-# UBC Formula Racing Design Team - Timing Gates
+# UBC Formula Racing Design Team - Timing Gates DOCUMENTATION 
 - I have documented the full design cycle and my current progress
 - This includes
   - Concept generation (block diagrams, high-level overview)
