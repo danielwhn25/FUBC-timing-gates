@@ -1,4 +1,4 @@
-# UBC Formula Racing Design Team - Timing Gates DOCUMENTATION 
+# UBC Formula Racing Design Team - Timing Gates System DOCUMENTATION 
 I have documented the full design cycle and my current progress. This include:
   - Complete schematic and PCB layout files (Altium Designer)
   - Analog signal conditioning circuit design and dark current mitigation strategy
@@ -6,11 +6,7 @@ I have documented the full design cycle and my current progress. This include:
   - Component selection rationale and BOM
   - Testing methodology and validation approach
   - Assembly and bring-up documentation
-# Laser Receiver (Photodiode) Schematic
-
-<img width="1804" height="936" alt="image" src="https://github.com/user-attachments/assets/4a2e9f8b-d89f-4256-a426-806c3c7f4640" />
-
-
+    
 # Formula UBC Timing Gates System
 ## Project Lead: Daniel Ng
 ## September 2025 – Present
@@ -18,7 +14,7 @@ I have documented the full design cycle and my current progress. This include:
 UBC’s Formula Racing team needed a reliable system to measure lap times and vehicle speed during testing to prepare for our annual competition. The existing solution—manually operated stopwatches—was both inaccurate and labour-intensive, and existing commercial products are expensive and non-customizable. Therefore, I'm leading the design and development of a laser-based timing gate system that automatically records lap times and instantaneous speeds as the car passes through checkpoints on the track.
 The system uses 650 nm red laser modules and receivers positioned on the track. When the car breaks the laser beam, receiver modules detect the interruption and timestamp the event. By placing two gates close together at a fixed distance, we can calculate instantaneous speed; by placing gates at the start/finish line, we can measure lap times. The data transmits wirelessly via 2.4 GHz Wi-Fi from a slave ESP32 MCU to a master ESP32 MCU, then to a laptop that the team can monitor during test days.
 # Prototyping
-<img width="353" height="148.6" alt="image" src="https://github.com/user-attachments/assets/7159bb5a-fd12-4fc4-b73b-40e9af208080" />
+<img width="353*2" height="148.6*2" alt="image" src="https://github.com/user-attachments/assets/7159bb5a-fd12-4fc4-b73b-40e9af208080" />
 
 ### My Role and Contributions
 As project lead, I'm responsible for the complete design cycle—from initial component selection through PCB layout to firmware development. The Formula Racing team has mechanical subteams and an electrical subteam, but I'm the only one working on the hardware side of this project. The circuit design, schematic capture, and board layout decisions are mine, and two mechanical engineering members designed the hardware enclosure.
@@ -52,3 +48,6 @@ For future development, in extreme or varying temperatures, we can add a small s
 # Finite State Machine Logic
 <img width="1762" height="876" alt="image" src="https://github.com/user-attachments/assets/ead815e7-2066-435c-8249-6020ee32722e" />
 
+# Laser Receiver (Photodiode) Schematic
+
+<img width="1804" height="936" alt="image" src="https://github.com/user-attachments/assets/4a2e9f8b-d89f-4256-a426-806c3c7f4640" />
