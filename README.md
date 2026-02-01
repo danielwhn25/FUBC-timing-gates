@@ -1,10 +1,11 @@
 # UBC Formula Racing Design Team - Timing Gates DOCUMENTATION 
-- I have documented the full design cycle and my current progress
-- This includes
-  - Concept generation (block diagrams, high-level overview)
-  - Component selection
-  - Schematic capture
-  - Layout: component placement and routing (V1.0, V2.0, V2.1)
+- I have documented the full design cycle and my current progress. This include:
+  - Complete schematic and PCB layout files (Altium Designer)
+  - Analog signal conditioning circuit design and dark current mitigation strategy
+  - Firmware architecture (ESP-IDF, interrupt-driven timing, ESP-NOW wireless protocol)
+  - Component selection rationale and BOM
+  - Testing methodology and validation approach
+  - Assembly and bring-up documentation
 # Laser Receiver (Photodiode) Schematic
 
 <img width="1804" height="936" alt="image" src="https://github.com/user-attachments/assets/4a2e9f8b-d89f-4256-a426-806c3c7f4640" />
