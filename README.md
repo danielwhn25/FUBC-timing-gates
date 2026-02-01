@@ -1,5 +1,5 @@
 # UBC Formula Racing Design Team - Timing Gates DOCUMENTATION 
-- I have documented the full design cycle and my current progress. This include:
+I have documented the full design cycle and my current progress. This include:
   - Complete schematic and PCB layout files (Altium Designer)
   - Analog signal conditioning circuit design and dark current mitigation strategy
   - Firmware architecture (ESP-IDF, interrupt-driven timing, ESP-NOW wireless protocol)
