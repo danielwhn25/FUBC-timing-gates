@@ -11,7 +11,7 @@ I have documented the full design cycle and my current progress. This includes:
 ## Project Lead: Daniel Ng
 ## September 2025 – Present
 ### Project Purpose
-UBC's Formula Racing team needed a reliable system to measure lap times and vehicle speed during testing to prepare for our annual competition. The existing solution—manually operated stopwatches—was both inaccurate and labor-intensive, and existing commercial products are expensive and non-customizable. Therefore, I'm leading the design and development of a laser-based timing gate system that automatically records lap times and instantaneous speeds as the car passes through checkpoints on the track (as illustrated in the TinkerCAD below).
+UBC's Formula Racing team needed a reliable system to measure lap times and vehicle speed during testing to prepare for our annual competition. The existing solution—manually operated stopwatches—was both inaccurate and labour-intensive, and existing commercial products are expensive and non-customizable. Therefore, I'm leading the design and development of a laser-based timing gate system that automatically records lap times and instantaneous speeds as the car passes through checkpoints on the track (as illustrated in the TinkerCAD below).
 
 The system uses 650 nm red laser modules and receivers positioned on the track. When the car breaks the laser beam, receiver modules detect the interruption and timestamp the event. By placing two gates close together at a fixed distance, we can calculate instantaneous speed; by placing gates at the start/finish line, we can measure lap times. The data transmits wirelessly via 2.4 GHz Wi-Fi from a slave ESP32 MCU to a master ESP32 MCU, then to a laptop that the team can monitor during test days.
 
@@ -39,17 +39,21 @@ Photodiodes generate current when light is shone onto them. Since these output c
 **Step 1:** Measure baseline dark current and record the TIA's output voltage in the worst-case scenario—the highest reasonable outdoor temperature. 
 
 ### Challenge 2: Assuming we have found the worst-case output voltage, how can we filter out this worst-case noise? 
-Assuming the worst-case dark current generates a Vout = x Volts, we must ensure that all input signals are less than x Volts. The challenge was finding an IC that would do this, and the first thought was a comparator (LM393). By "comparing" our TIA's output voltage, which is our comparator's inverting input, to the non-inverting input, we can essentially filter out all values less than x.
+Assuming the worst-case dark current generates a $V_{out} = x$ Volts, we must ensure that all input signals are less than $x$ Volts. The challenge was finding an IC that would do this, and the first thought was a comparator (LM393). By "comparing" our TIA's output voltage, which is our comparator's inverting input, to the non-inverting input, we can essentially filter out all values less than $x$.
 
 Mathematically speaking:
-- Let Vout, TIA = Vin, comparator = Vinverting input, comparator = Vn
-- Vp = Vnon-inverting input, comparator
-- If Vn < Vp, Vout, comparator = VCCcomparator
-- Else, Vout, comparator = 0 V
 
-During the testing phase, we can adjust the ambient temperature and record the output voltage at each temperature. Greater temperatures ⇒ greater dark current ⇒ greater output voltage noise. Depending on our photodiode's dark current sensitivity, our noise levels will vary. Therefore, our reference comparison must also be adjustable. If we know what temperature our laser receiver system will be operating in, we should be able to adjust the "comparison voltage" (which is Vp) by using a potentiometer at the non-inverting input. Essentially, we have a "voltage profile" for each temperature, based on the temperature data plotting we gathered in Step 1. 
+Let $V_{out, TIA} = V_{in, comparator} = V_{inverting\ input, comparator} = V_n$
 
-This comparator setup is known as the Schmitt trigger, designed to output clean, digital signals from analog inputs. Essentially, we have just created our custom analog front end—taking in a noisy and weak input signal, amplifying it, and filtering out false signals using a comparator and sending a clean Vout, comparator to our ESP32's GPIO. 
+$V_p = V_{non-inverting\ input, comparator}$
+
+**If** $V_n < V_p$, then $V_{out, comparator} = V_{CC_{comparator}}$
+
+**Else**, $V_{out, comparator} = 0\ V$
+
+During the testing phase, we can adjust the ambient temperature and record the output voltage at each temperature. Greater temperatures ⇒ greater dark current ⇒ greater output voltage noise. Depending on our photodiode's dark current sensitivity, our noise levels will vary. Therefore, our reference comparison must also be adjustable. If we know what temperature our laser receiver system will be operating in, we should be able to adjust the "comparison voltage" (which is $V_p$) by using a potentiometer at the non-inverting input. Essentially, we have a "voltage profile" for each temperature, based on the temperature data plotting we gathered in Step 1. 
+
+This comparator setup is known as the Schmitt trigger, designed to output clean, digital signals from analog inputs. Essentially, we have just created our custom analog front end—taking in a noisy and weak input signal, amplifying it, and filtering out false signals using a comparator and sending a clean $V_{out, comparator}$ to our ESP32's GPIO. 
 
 In addition to electrical noise, we have to take into account ambient outdoor noise and false triggers. Since we are operating this receiver system in an outdoor environment, the sun and other environmental elements may input light onto our photodiode. To mitigate this, we can use non-reflective material to shroud our PCB and add a 650 nm red-light filter to block out the noise.
 
