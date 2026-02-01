@@ -2,7 +2,7 @@
 I have documented the full design cycle and my current progress. This include:
   - Complete schematic and PCB layout files (Altium Designer)
   - Analog signal conditioning circuit design and dark current mitigation strategy
-  - Firmware architecture (ESP-IDF, interrupt-driven timing, ESP-NOW wireless protocol)
+  - Firmware architecture (ESP-IDF, interrupt-driven timing, ESP-NOW 2.4 GHz Wi-Fi protocol)
   - Component selection rationale and BOM
   - Testing methodology and validation approach
   - Assembly and bring-up documentation
