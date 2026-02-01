@@ -47,8 +47,8 @@ Once assembled, I plan on following measuring the base current and TIA output vo
 For future development, in extreme or varying temperatures, we can add a small servo/arm to adjust the comparator’s non-inverting input voltage by rotating the potentiometer knob automatically. 
 
 # Finite State Machine Logic
-<img width="1762" height="876" alt="image" src="https://github.com/user-attachments/assets/ead815e7-2066-435c-8249-6020ee32722e" />
+<img width="353*2" height="148.6*2" alt="image" src="https://github.com/user-attachments/assets/ead815e7-2066-435c-8249-6020ee32722e" />
 
 # Laser Receiver (Photodiode) Schematic
 
-<img width="1804" height="936" alt="image" src="https://github.com/user-attachments/assets/4a2e9f8b-d89f-4256-a426-806c3c7f4640" />
+<img width="353*2" height="148.6*2" alt="image" src="https://github.com/user-attachments/assets/4a2e9f8b-d89f-4256-a426-806c3c7f4640" />
