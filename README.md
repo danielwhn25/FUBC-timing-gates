@@ -1,4 +1,4 @@
-# UBC Formula Racing Design Team - Timing Gates System DOCUMENTATION 
+# UBC Formula Racing Design Team - Timing Gates System 
 I have documented the full design cycle and my current progress. This includes:
   - Complete schematic and PCB layout files (Altium Designer)
   - Analog signal conditioning circuit design and dark current mitigation strategy
