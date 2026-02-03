@@ -70,5 +70,8 @@ For future development, in extreme or varying temperatures, we can add a small s
 # Laser Receiver (Photodiode) Schematic
 <img width="353*2" height="148.6*2" alt="image" src="https://github.com/user-attachments/assets/4a2e9f8b-d89f-4256-a426-806c3c7f4640" />
 
+<img width="353*2" height="148.6*2" alt="image" src="https://github.com/user-attachments/assets/59e6bc49-c12a-4646-bde4-1609f6b82256" />
+
+
 ### Supporting Materials
 This project description is available on my GitHub in Markdown format. Additional documentation such as prototypes, schematics, and layouts are available on my GitHub (https://github.com/danielwhn25) and portfolio website (https://danielng.pages.dev/). While the firmware is still under development, I'm happy to discuss the current plans and logic in an interview!
